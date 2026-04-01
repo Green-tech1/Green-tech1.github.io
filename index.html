@@ -228,7 +228,86 @@ strong a{
     color: #ec2b2b;
     font-family: sans-serif;
 }
+/* تحسينات عامة لضمان التجاوب */
+* {
+    box-sizing: border-box;
+}
 
+@media screen and (max-width: 600px) {
+    /* 1. الحاوية الرئيسية: نلغي المسافات الكبيرة ونضبط العرض */
+    body {
+        padding: 10px;
+        min-height: 100vh; /* تقليل الارتفاع الافتراضي */
+    }
+
+    .contact-container {
+        padding: 20px 15px !important;
+        width: 100% !important;
+        border-radius: 15px !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    }
+
+    /* 2. العنوان الرئيسي والروابط: نمنع خروج الروابط عن الشاشة */
+    h1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 15px 0 !important;
+    }
+
+    h1 a {
+        margin: 5px !important;
+        font-size: 16px !important;
+        padding: 5px 10px;
+        background: #f0f0f0;
+        border-radius: 5px;
+        flex: 1 1 30%; /* جعل الروابط تتوزع بشكل متساوي */
+        text-align: center;
+    }
+
+    /* 3. الصور: منع الصور من تمديد الصفحة عرضياً */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 10px;
+    }
+
+    /* 4. الساعة: تصغير الحجم لتناسب الشاشة الصغيرة */
+    #clock-container {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+
+    #time {
+        font-size: 1.5rem !important;
+    }
+
+    #date {
+        font-size: 1rem !important;
+    }
+
+    /* 5. الفورم (النماذج): جعل الحقول بعرض الشاشة بالكامل */
+    textarea, input, select {
+        width: 100% !important;
+        font-size: 16px !important; /* حجم خط يمنع الزوم التلقائي في الآيفون */
+        margin-bottom: 15px !important;
+    }
+
+    button {
+        width: 100% !important;
+        padding: 15px !important;
+        font-size: 18px !important;
+    }
+
+    /* 6. نصوص الخدمات: تحسين القراءة */
+    strong {
+        font-size: 15px !important;
+        line-height: 1.6;
+        display: block;
+        text-align: right;
+    }
+}
         
     </style> 
     
