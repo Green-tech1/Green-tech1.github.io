@@ -244,6 +244,74 @@ fieldset{
             font-family: sans-serif;
             color: #e61d1d;
         }
+/* تنسيق شامل لضمان عدم خروج العناصر عن الشاشة */
+* {
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+    /* 1. ضبط الحاوية الرئيسية لتناسب شاشة الموبايل */
+    .contact-container {
+        width: 95% !important;
+        padding: 20px 15px !important;
+        margin: 10px auto !important;
+    }
+
+    /* 2. جعل الصور مرنة (Responsive Images) */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 3. تعديل حجم حقول الإدخال والقوائم لتأخذ العرض كاملاً */
+    textarea, input, select {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        font-size: 16px !important; /* حجم خط مناسب للمس باليد */
+    }
+
+    /* 4. تنسيق خاص لحقول الـ fieldset لتظهر بشكل مرتب */
+    fieldset {
+        width: 100% !important;
+        font-size: 14px !important;
+        padding: 10px !important;
+        margin-bottom: 5px !important;
+        text-align: center !important; /* جعل النص في المنتصف للموبايل */
+    }
+
+    /* 5. تنسيق الروابط العلوية (القائمة) */
+    h1 a {
+        display: inline-block;
+        margin: 5px !important;
+        font-size: 15px !important;
+        padding: 5px;
+    }
+
+    /* 6. ضبط زر الإرسال وزر إعادة الاختيار */
+    button, input[type="reset"] {
+        width: 100% !important;
+        margin-top: 10px !important;
+        padding: 15px !important;
+    }
+
+    /* 7. ضبط الساعة */
+    #clock-container {
+        width: 100% !important;
+        padding: 10px !important;
+    }
+    
+    #time {
+        font-size: 1.5rem !important;
+    }
+
+    /* 8. ضبط حقل تاريخ الميلاد */
+    input[type="date"] {
+        text-align: center;
+        padding: 10px;
+    }
+}
+         
     </style> 
     
  
