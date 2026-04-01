@@ -252,6 +252,63 @@ h6{
         font-family: sans-serif;
       
     }
+
+        /* هذا الكود سيتم تطبيقه فقط على الشاشات التي عرضها 600 بكسل أو أقل */
+@media screen and (max-width: 600px) {
+    
+    /* 1. جعل الحاوية الرئيسية تأخذ كامل العرض مع هوامش بسيطة */
+    .contact-container {
+        width: 95%;
+        padding: 15px;
+        margin: 10px auto;
+        border-radius: 10px; /* تقليل الحواف لتناسب الشاشات الصغيرة */
+    }
+
+    /* 2. ضبط الصور لتكون مرنة ولا تخرج عن حدود الشاشة */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        width: auto !important;
+    }
+
+    /* 3. تكبير حقول الإدخال والظهور بشكل كامل (100%) */
+    textarea, input, select {
+        width: 100% !important; /* بدلاً من 70% في كودك الأصلي */
+        font-size: 14px; /* حجم خط مريح للعين على الموبايل */
+        padding: 10px;
+    }
+
+    /* 4. ضبط الزر ليكون عريضاً وسهل الضغط بالإصبع */
+    button {
+        width: 100% !important;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    /* 5. تنسيق القائمة (الروابط) لتظهر تحت بعضها إذا كانت كثيرة */
+    h1 a {
+        display: inline-block;
+        margin: 10px 5px;
+        font-size: 16px;
+    }
+
+    /* 6. تصغير حجم النصوص الكبيرة (العناوين) */
+    h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    /* 7. ضبط الساعة لتناسب عرض الموبايل */
+    #clock-container {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    #time {
+        font-size: 1.5rem;
+    }
+} 
+         
     </style> 
     
  
